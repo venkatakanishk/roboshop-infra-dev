@@ -13,5 +13,5 @@ variable "zone_id" {
 }
 
 variable "domain_name" {
-  default = naniops.online
+  default = "naniops.online"
 }
