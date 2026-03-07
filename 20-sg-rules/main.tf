@@ -4,7 +4,7 @@ resource "aws_security_group_rule" "bastion_internet" {
   to_port           = 22
   protocol          = "tcp"
 #   cidr_blocks       = ["0.0.0.0/0"]
-  cidr_blocks = [local.my_public_ip] # allowing my ip in bastion sg as source
+  cidr_blocks = [local.my_ip] # allowing my ip in bastion sg as source
   security_group_id = local.bastion_sg_id
 }
 
