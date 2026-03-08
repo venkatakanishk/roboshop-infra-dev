@@ -4,10 +4,7 @@
         {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
-            "Action": [
-                "ssm:DescribeDocumentParameters",
-                "ssm:GetParameter"
-            ],
+            "Action": "ssm:GetParameter",
             "Resource": "arn:aws:ssm:us-east-1:299252893667:parameter/roboshop/dev/mysql_root_password"
         },
         {
