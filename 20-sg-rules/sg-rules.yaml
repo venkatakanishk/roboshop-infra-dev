@@ -6,6 +6,9 @@
   port: 22
   src: bastion
   dest:  mongodb
+- name: mysql from bastion # mysql accepting connections from bastion
+  port: 22
+  src: bastion
 - name: mongodb from catalogue # mongodb accepting connections from catalogue
   port: 27017
   src: catalogue
