@@ -1,4 +1,4 @@
-// {
+/* // {
 //     "Version": "2012-10-17",
 //     "Statement": [
 //         {
@@ -13,8 +13,10 @@
 //             "Action": "ssm:DescribeParameters",
 //             "Resource": "*"
 //         }
-//     ]
+    ]
+ */
 
+ 
 {
     "Version": "2012-10-17",
     "Statement": [
