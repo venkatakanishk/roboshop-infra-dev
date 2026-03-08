@@ -18,11 +18,12 @@ resource "aws_iam_role" "mysql" {
     ]
   })
 
-  tags = merge (
-                    {
-                        Name = "${var.project}-${var.environment}-mysql-policy-role"
-                    },
-                local.common_tags)
+  tags = merge(
+    {
+        Name = local.iam_role_name
+    },
+    local.common_tags
+  )
 }
 
 resource "aws_iam_policy" "mysql" {
