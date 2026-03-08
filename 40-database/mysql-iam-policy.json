@@ -1,14 +1,39 @@
+// {
+//     "Version": "2012-10-17",
+//     "Statement": [
+//         {
+//             "Sid": "VisualEditor0",
+//             "Effect": "Allow",
+//             "Action": "ssm:GetParameter",
+//             "Resource": "arn:aws:ssm:us-east-1:299252893667:parameter/roboshop/dev/mysql_root_password"
+//         },
+//         {
+//             "Sid": "VisualEditor1",
+//             "Effect": "Allow",
+//             "Action": "ssm:DescribeParameters",
+//             "Resource": "*"
+//         }
+//     ]
+
 {
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "VisualEditor0",
+            "Sid": "GetMysqlPassword",
             "Effect": "Allow",
-            "Action": "ssm:GetParameter",
+            "Action": [
+                "ssm:GetParameter"
+            ],
             "Resource": "arn:aws:ssm:us-east-1:299252893667:parameter/roboshop/dev/mysql_root_password"
         },
         {
-            "Sid": "VisualEditor1",
+            "Sid": "AllowKMSDecrypt",
+            "Effect": "Allow",
+            "Action": "kms:Decrypt",
+            "Resource": "*"
+        },
+        {
+            "Sid": "DescribeParameters",
             "Effect": "Allow",
             "Action": "ssm:DescribeParameters",
             "Resource": "*"
